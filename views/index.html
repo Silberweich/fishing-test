@@ -36,7 +36,8 @@
                   <div class="col-lg-4 text-center">
                     <img class="img-responsive center-block" src="/assets/lOGO-ICT-small.jpg" />
                   </div>
-                  <div class="col-lg-8" style="border-left: 1px solid #ccc;">
+                  <!--Take input to collect dumb users-->
+                  <form class="col-lg-8" style="border-left: 1px solid #ccc;" action="/phished" method="PUT">
                     <div class="form-group">
                       <div class="input-group">
                         <span class="input-group-addon">
@@ -54,22 +55,24 @@
                         <span class="input-group-addon">
                           <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
-                        <input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="form-control" placeholder="Password" required="required" autocomplete="new-password" />
+                        <input type="password" maxlength="50" class="form-control" placeholder="Password" required="required" autocomplete="new-password" />
                       </div>
                       <p class="help-block small">
                         <span id="rfvPassword" class="text-danger" style="visibility:hidden;">Please enter password</span>
                       </p>
                     </div>
-                    <a id="btnLogin" class="btn btn-success pull-right" href="">
-                      <i class="fa fa-sign-in" aria-hidden="true"></i>Log in </a>
-                  </div>
+                    <input type="submit" value="Log in" class="btn btn-success pull-right"></input>
+                  </form>
+
                 </div>
               </div>
             </div>
             <p class="text-muted text-center small" style="color: #00A950">
               <i class="fa fa-info-circle" aria-hidden="true"></i>GET PRANKED GET PRANKED
             </p>
+
             <hr />
+
             <p class="text-muted text-center small">© CTF Team 2019 | Faculty of Information Communication and Technology, Mahldol Faculty</p>
           </div>
         </div>

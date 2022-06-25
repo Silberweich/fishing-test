@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"text/template"
@@ -8,17 +9,22 @@ import (
 
 type tempTitle struct {
 	Title string
+	User  string
 }
 
 func indexHandler(w http.ResponseWriter, req *http.Request) {
 	view, _ := template.ParseFiles("./views/index.html")
-	data := tempTitle{Title: "ICT - Password Reset"}
+	data := tempTitle{Title: "ICT - Password Reset", User: "None"}
 	view.Execute(w, data)
 }
 
 func prankedHandler(w http.ResponseWriter, req *http.Request) {
+	req.ParseForm()
+	// logic part of log in
+	fmt.Println("username:", req.Form["txtUserName"][0])
+	//usr := req.Form["txtUserName"]
 	view, _ := template.ParseFiles("./views/pranked.html")
-	data := tempTitle{Title: "Get Pranked"}
+	data := tempTitle{Title: "Get Pranked", User: req.Form["txtUserName"][0]}
 	view.Execute(w, data)
 }
 
