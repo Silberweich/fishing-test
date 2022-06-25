@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="/styles/main.css" rel="stylesheet" type="text/css"> -->
+    <link href="/styles/bootstrap.css" rel="stylesheet" />
+    <link href="/styles/font-awesome.css" rel="stylesheet" />
+    <link href="/styles/custom.css" rel="stylesheet" />
+    <title>{{ .Title }}</title>
+    <!--This is a fake phishing page to promote a certain event-->
+    <!--This site does not collect your password-->
+    <!--Flag: BKRM{1269a41002c5c3e9116e3ba76438ff84}-->
+  </head>
+  <body>
+    <div id="UpdatePanel1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-3">
+            <div class="page-header">
+              <strong>
+                <h4 style="color: #00A950;font-weight:bolder;">
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>ICT - Internal Recovery System
+                </h4>
+              </strong>
+            </div>
+            <div class="panel panel-primary" style="border: thin solid #00A950">
+              <div class="panel-heading" style="background-color: white; color: #00A950; border-bottom: thin solid #00A950">
+                <h3 class="panel-title">
+                  <i class="fa fa-sign-in" aria-hidden="true"></i> Input current Username and Password
+                </h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-4 text-center">
+                    <img class="img-responsive center-block" src="/assets/lOGO-ICT-small.jpg" />
+                  </div>
+                  <div class="col-lg-8" style="border-left: 1px solid #ccc;">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                          </i>
+                        </span>
+                        <input name="txtUserName" type="text" maxlength="50" id="txtUserName" class="form-control input-user" placeholder="Username e.g. u6900XXX" required="required" autocomplete="false" />
+                      </div>
+                      <p class="help-block small">
+                        <span id="rfvUserName" class="text-danger" style="visibility:hidden;">Please enter username</span>
+                      </p>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                        <input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="form-control" placeholder="Password" required="required" autocomplete="new-password" />
+                      </div>
+                      <p class="help-block small">
+                        <span id="rfvPassword" class="text-danger" style="visibility:hidden;">Please enter password</span>
+                      </p>
+                    </div>
+                    <a id="btnLogin" class="btn btn-success pull-right" href="">
+                      <i class="fa fa-sign-in" aria-hidden="true"></i>Log in </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-muted text-center small" style="color: #00A950">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>GET PRANKED GET PRANKED
+            </p>
+            <hr />
+            <p class="text-muted text-center small">© CTF Team 2019 | Faculty of Information Communication and Technology, Mahldol Faculty</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
