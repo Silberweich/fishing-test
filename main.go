@@ -18,6 +18,12 @@ func indexHandler(w http.ResponseWriter, req *http.Request) {
 	view.Execute(w, data)
 }
 
+func invitationHandler(w http.ResponseWriter, req *http.Request) {
+	view, _ := template.ParseFiles("./views/invitation.html")
+	data := tempTitle{Title: "Invitation!", User: "None"}
+	view.Execute(w, data)
+}
+
 func prankedHandler(w http.ResponseWriter, req *http.Request) {
 	req.ParseForm()
 	// logic part of log in
@@ -32,6 +38,7 @@ func main() {
 	// handler
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/phished", prankedHandler)
+	http.HandleFunc("/invitation", invitationHandler)
 
 	// styling
 	styles := http.FileServer(http.Dir("./views/styles"))

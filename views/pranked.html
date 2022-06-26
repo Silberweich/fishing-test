@@ -2,13 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <title>{{ .Title }}</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <title>{{ .Title }}</title>
+  <!--This is a fake phishing page to promote a certain event-->
+  <!--This site does not collect your password-->
+
+  <!-- I hate this, CSS doesn't feel like coding, its like another language -->
 </head>
 
 <body>
-    <p>{{ .User }} has been pranked</p>
+    <div class="scrolling-limit">
+      <div class = "scrolling-l">
+        <div id="en"><div class="blink">--EMERGENCY--</div> An idiot just got their password stolen boohoo </div>
+        <div id="en"><div class="blink">--EMERGENCY--</div> An idiot just got their password stolen boohoo </div>
+        <div id="en"><div class="blink">--EMERGENCY--</div> An idiot just got their password stolen boohoo </div>
+        <div id="en"><div class="blink">--EMERGENCY--</div> An idiot just got their password stolen boohoo </div>
+      </div>
+    </div>
+
+    <section class="fakeScreen">
+      <p id="en" class = "command">
+        [~]$ fisher_web --logs --head=1
+      </p>
+      <p id="en" class = "command">
+        Fetched [1] result from stolen(?) password logs<br>
+        <-- INDEX:1 --><br>
+        USRNAME: {{ .User }}<br>
+        PASSWD:<b class="blink"> --STOLEN??? (ಥ﹏ಥ)--</b><br>
+        <--   EOL   -->
+      </p>
+      <p id="en" class = "command">
+        [~]$ <b class="blink2">_</b>
+      </p>
+    </section>
+    <section class="box">
+      <h2 id="en" style="color:green;">PASSWORD STOLEN! (OR WAS IT?)</h2>
+      <h2 id="th" style="color:green; letter-spacing: 1.5px;">พาสเวิร์ดโดนโขมย! (รึเปล่า?)</h2>
+    </section>
+
+    <!-- BROKEN LINKING BOX, FUCK CSS -->
+    <a href="/invitation" style="color: inherit; text-decoration: none;">
+      <section class="button">
+        <h3 id="en" style="color:green;">Uhh, What next? </h3>
+        <h3 id="th" style="color:green; letter-spacing: 1.5px;"> อ่า, เเล้วไงต่อ?</h3>
+      </section>
+    </a>
+
+    <div class="scrolling-limit">
+      <div class = "scrolling-r">
+        <div id="en"><div class="blink">--EMERGENCY--</div> An idiot just got their password stolen boohoo </div>
+        <div id="en"><div class="blink">--EMERGENCY--</div> An idiot just got their password stolen boohoo </div>
+        <div id="en"><div class="blink">--EMERGENCY--</div> An idiot just got their password stolen boohoo </div>
+        <div id="en"><div class="blink">--EMERGENCY--</div> An idiot just got their password stolen boohoo </div>
+      </div>
+    </div>
 </body>
+</html>
