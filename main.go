@@ -21,6 +21,7 @@ func indexHandler(w http.ResponseWriter, req *http.Request) {
 func invitationHandler(w http.ResponseWriter, req *http.Request) {
 	view, _ := template.ParseFiles("./views/invitation.html")
 	data := tempTitle{Title: "Invitation!", User: "None"}
+	w.Header().Add("x-secret-message", "Check Somewhere else, try")
 	view.Execute(w, data)
 }
 
@@ -31,6 +32,8 @@ func prankedHandler(w http.ResponseWriter, req *http.Request) {
 	//usr := req.Form["txtUserName"]
 	view, _ := template.ParseFiles("./views/pranked.html")
 	data := tempTitle{Title: "Get Pranked", User: req.Form["txtUserName"][0]}
+	w.Header().Add("x-secret-message-1", "Whoa, wouldn't this be too easy?")
+	w.Header().Add("x-secret-message-2", "No hints? No server information?")
 	view.Execute(w, data)
 }
 
