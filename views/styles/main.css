@@ -14,19 +14,26 @@
 }
 
 body {
-    background : #151515;
+    background : black;
 }
 
-.center-screen {
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    margin-top: 5vh;
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
+    margin-top: 4vh;
+    margin-bottom: 3.5vh;
+}
+
+div.center-container {
+    margin-left: 33%;
+    margin-right: 33%;
 }
 
 /* SCROLLING ANIMATION + BLINK */
 div.scrolling-limit{
-    color: #151515;
+    color: black;
 	padding: 0.5vh;
 	font-size: 40px;
     background : #0090a5;
@@ -54,6 +61,13 @@ div.scrolling-r{
     display: inline;
     -webkit-user-select: none;
     user-select: none;
+}
+
+.center-screen {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-top: 5vh;
 }
 
 @keyframes scroll-l{
@@ -96,7 +110,7 @@ div.scrolling-r{
 /* TERMINAL AND ANIMATION */
 
 .fakeScreen {
-    background-color: #6b6c74;
+    background-color: #151515;
     box-sizing: border-box;
     width: 550px;
     margin: 0 auto;
@@ -104,6 +118,21 @@ div.scrolling-r{
     border-radius: 5px;
     text-align: left;
     margin-top: 5vh;
+}
+
+div.center-container h2#en,
+div.center-container h2#th {
+    color: #AE4229
+}
+
+div.center-container h3#en,
+div.center-container h3#th {
+    color: #FFB500
+}
+
+div.center-container h4#en,
+div.center-container h4#th {
+    color: #FFB500
 }
 
 p#en,
@@ -153,7 +182,7 @@ p.command:nth-child(3){
 }
 
 .button {
-    background-color: #6b6c74;
+    background-color: #151515;
     width: 300px;
     margin: 0 auto;
     padding: 1px;

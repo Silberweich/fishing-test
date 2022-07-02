@@ -6,11 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.css">
     <title>{{ .Title }}</title>
+
+    <!-- messed up asf, im bad at web prog -->
+    <script>
+        var countDownDate = new Date("Jul 30, 2022 15:38:25").getTime();
+        
+        var x = setInterval(function() {
+          var now = new Date().getTime();
+        
+          var distance = countDownDate - now;
+        
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+          document.getElementById("timer1").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+          document.getElementById("timer2").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+          document.getElementById("timer3").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+          document.getElementById("timer4").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+          document.getElementById("timer5").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+        
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer1").innerHTML = "EVENT HAS STARTED";
+            document.getElementById("timer2").innerHTML = "EVENT HAS STARTED";
+            document.getElementById("timer3").innerHTML = "EVENT HAS STARTED";
+            document.getElementById("timer4").innerHTML = "EVENT HAS STARTED";
+            document.getElementById("timer5").innerHTML = "EVENT HAS STARTED";
+          }
+        }, 250);
+    </script>
 </head>
 
 <body>
-    <p>invitation</p>
+    <div class="scrolling-limit">
+        <div class = "scrolling-l">
+          <div id="en">&nbsp;&nbsp; -- &nbsp;&nbsp;<div id="timer1" class="blink"></div>&nbsp;&nbsp; -- &nbsp;&nbsp;Countdown until the event</div>
+          <div id="en">&nbsp;&nbsp; -- &nbsp;&nbsp;<div id="timer2" class="blink"></div>&nbsp;&nbsp; -- &nbsp;&nbsp;Countdown until the event</div>
+          <div id="en">&nbsp;&nbsp; -- &nbsp;&nbsp;<div id="timer3" class="blink"></div>&nbsp;&nbsp; -- &nbsp;&nbsp;Countdown until the event</div>
+          <div id="en">&nbsp;&nbsp; -- &nbsp;&nbsp;<div id="timer4" class="blink"></div>&nbsp;&nbsp; -- &nbsp;&nbsp;Countdown until the event</div>
+          <div id="en">&nbsp;&nbsp; -- &nbsp;&nbsp;<div id="timer5" class="blink"></div>&nbsp;&nbsp; -- &nbsp;&nbsp;Countdown until the event</div>
+        </div>
+      </div>
+    
+    <img src="/assets/poster.jpg" alt="Cool Event Poster">
+    <div class="center-container">
+        <h2 id="en">|||> Briefing</h2>
+        <p id="en">
+          &nbsp;&nbsp;&nbsp;&nbsp; The MUICT CTF club is recruiting again!
+          We are looking for people who are passionate in CyberSecurity or have yet to decide on their career path to join us.
+        </p>
+        <h4 id="en">Have no experience? Not sure what CyberSecurity is?</h4>
+        <p id="en">        
+          &nbsp;&nbsp;&nbsp;&nbsp;Worry not! In this meeting we will be introducing you to CyberSecurity, 
+          CTF, and the possible glorious career path you can take advantages of! 
+        </p>
+        <h4 id="en">I'm interested Where do I join?!?!</h4>
+        <p id="en">        
+          ==LINK==
+        </p>
+
+        <h2 id="en">|||> Agenda</h2>
+        <h3 id="en">Introduction to Cybersecurity</h3>
+        <h3 id="en">Basic CTF Workshop</h3>
+
+        <h2 id="en">|||> About</h2>
+        <p id="en">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Mauris et semper urna. Phasellus semper libero posuere libero pretium, eget interdum ipsum dictum. 
+          Nulla id justo ut justo viverra venenatis a ut erat. Praesent diam nunc, venenatis et porttitor semper, semper eget nunc. 
+          Mauris tellus est, commodo ac nisl eu, gravida blandit neque. Donec vitae semper urna. 
+          Integer sed elementum nisl, ut imperdiet lacus. Vestibulum tempor mattis lorem, nec accumsan odio gravida tincidunt. 
+          Morbi feugiat id velit at vehicula. Ut consectetur ex sit amet ligula ullamcorper, eleifend mattis odio tempor. 
+          Duis iaculis dui nunc, at malesuada dui pretium quis. Nulla facilisi. Cras ornare, ipsum sagittis iaculis consectetur, 
+          massa arcu euismod tortor, id placerat tellus turpis eu purus. Proin et enim fermentum, congue enim ut, cursus diam. 
+          Vestibulum efficitur quam at mauris varius, nec ultricies ante molestie.</p>
+    </div>
 </body>
 </html>
